@@ -17,7 +17,9 @@ After the installation of Docker we need to create a Microsoft SQL Server 2017 c
 docker run --name sql -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 Warning 1: **In Windows replace all single-quotes with double-quotes**
+
 Warning 2: **In Linux you need to run this command with superuser**
+
 Warning 3: **Don't forget to replace the SA_PASSWORD with a strong password. If there's any error connecting to the container later on this may be the cause of such error.**
 
 Finally to start your SQL container you can simply run
