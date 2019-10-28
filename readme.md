@@ -19,16 +19,19 @@ docker run --name sql -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' 
 Warning 1: **In Windows replace all single-quotes with double-quotes**
 Warning 2: **In Linux you need to run this command with superuser**
 Warning 3: **Don't forget to replace the SA_PASSWORD with a strong password. If there's any error connecting to the container later on this may be the cause of such error.**
+
 Finally to start your SQL container you can simply run
 ```
 docker start sql
 ```
 Warning 1: **In Linux you need to run this command with superuser**
-To check that our container is running we can check by executing:
+
+To check that our container is running we can execute:
 ```
 docker ps
 ```
 Warning 1: **In Linux you need to run this command with superuser**
+
 If the container is not shown an error occurred and further research is required. Try searching about the `docker logs` command. (If the container is not running it will show by executing `docker ps -a`)
 ##### Accessing your DBMS
 To access your newly created SQL Server with DBeaver, for example, you can use the following connection details:
