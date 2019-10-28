@@ -14,13 +14,15 @@ sudo pacman -S docker
 ##### Docker SQL configuration
 After the installation of Docker we need to create a Microsoft SQL Server 2017 container to support our relational DBMS. To create the container run this command in your system command line:
 ```
-docker run --name sql -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
+docker run --name sql -v <host directory>:/var/opt/mssql -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
-Warning 1: **In Windows replace all single-quotes with double-quotes**
+Warning 1: **Substituir <host directory> pelo sítio onde os dados da base de dados iram ser guardados**
 
-Warning 2: **In Linux you need to run this command with superuser**
+Warning 2: **In Windows replace all single-quotes with double-quotes**
 
-Warning 3: **Don't forget to replace the SA_PASSWORD with a strong password. If there's any error connecting to the container later on this may be the cause of such error.**
+Warning 3: **In Linux you need to run this command with superuser**
+
+Warning 4: **Don't forget to replace the SA_PASSWORD with a strong password. If there's any error connecting to the container later on this may be the cause of such error.**
 
 Finally to start your SQL container you can simply run
 ```
