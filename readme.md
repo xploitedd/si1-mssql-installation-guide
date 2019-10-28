@@ -16,7 +16,7 @@ After the installation of Docker we need to create a Microsoft SQL Server 2017 c
 ```
 docker run --name sql -v <host directory>:/var/opt/mssql -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=yourStrong(!)Password' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
 ```
-Warning 1: **Substituir <host directory> pelo sítio onde os dados da base de dados iram ser guardados**
+Warning 1: **Substituir \<host directory\> pelo sítio onde os dados da base de dados iram ser guardados**
 
 Warning 2: **In Windows replace all single-quotes with double-quotes**
 
